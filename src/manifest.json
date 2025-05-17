@@ -1,0 +1,20 @@
+{
+    "manifest_version" : 3,
+    "name" : "Textract",
+    "version" : "1.0",
+    "description" : "This Extension help extract text in Youtube video directly and save it in clipboard on pausing video",
+    "author" : "Bhupesh Chandel",
+    "permissions" : ["activeTab","tabs","storage","scripting","clipboardWrite"],
+    "content_scripts" : [
+        {
+            "matches" : ["*://www.youtube.com/*"],
+            "js" : ["content.js"]
+        }
+    ],
+    "action" : {
+        "default_popup" : "popup.html",
+        "default_title": "Textract"
+    }
+    
+}
+
